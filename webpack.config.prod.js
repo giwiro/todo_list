@@ -1,10 +1,11 @@
+const webpack = require('webpack');
 const merge = require('webpack-merge');
-const common = require('webpack.config.common');
+const common = require('./webpack.config.common');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = merge(common, {
     devtool: 'source-map',
-    plugin: [
+    plugins: [
         new UglifyJSPlugin({
             comments: false,
             sourceMap: true
