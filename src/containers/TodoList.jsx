@@ -16,7 +16,8 @@ export default class TodoList extends React.Component {
 
   handleSubmit(event) {
     this.setState({
-      todoList: this.state.todoList.concat(this.state.value)
+      todoList: this.state.todoList.concat(this.state.value),
+      value: '',
     });
     event.preventDefault();
   }
