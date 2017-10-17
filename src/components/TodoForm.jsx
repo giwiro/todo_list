@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class TodoForm extends React.Component {
   constructor() {
@@ -17,3 +18,9 @@ export default class TodoForm extends React.Component {
     )
   }
 }
+
+TodoForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
+};
